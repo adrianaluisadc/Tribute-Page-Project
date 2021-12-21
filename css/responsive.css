@@ -1,0 +1,218 @@
+@media screen and (min-width: 480px) {
+  #title {
+    font-size: 3em;
+    line-height: 1.6em;
+  }
+
+  #image,
+  #image2,
+  #image3 {
+    width: 420px;
+    margin: auto;
+    padding-top: 5%;
+  }
+
+  #img-caption {
+    margin-top: 50px;
+    font-size: 1.5em;
+  }
+
+  #img-div {
+    margin-bottom: 0;
+  }
+
+  #tribute-info,
+  #tribute-info2,
+  #tribute-info3 {
+    position: relative;
+    margin: 0;
+    margin-top: 40px;
+    margin-left: 35px;
+    width: 90%;
+  }
+
+  #tribute-info p,
+  #tribute-info2 p,
+  #tribute-info3 p {
+    font-size: 1em;
+  }
+
+  #content-text-title {
+    font-size: 2em;
+    padding-top: 40px;
+    padding-bottom: 6%;
+  }
+
+  #content-text-container p {
+    font-size: 1.1em;
+    padding: 2% 7%;
+    line-height: 1.5em;
+  }
+
+  #extlinks {
+    font-size: 1em;
+    padding: 3% 7%;
+  }
+
+  #copyright {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #headerimg {
+    width: 100%;
+    right: 0;
+  }
+
+  #text-container {
+    width: 30%;
+    left: 0;
+  }
+  #title {
+    font-size: 2.5em;
+    line-height: 1.8em;
+    text-align: left;
+  }
+
+  #content {
+    grid-template-areas:
+      "one two three"
+      "four four four"
+      "six six six"
+      "five five five";
+  }
+
+  #img-div {
+    display: grid;
+    grid-area: six;
+    grid-template-areas:
+      "a a a"
+      "b c d"
+      "b c d";
+    grid-column-gap: 2%;
+  }
+
+  #img-caption {
+    grid-area: a;
+  }
+
+  #image {
+    grid-area: c;
+  }
+
+  #image2 {
+    grid-area: b;
+  }
+
+  #image3 {
+    grid-area: d;
+  }
+
+  #image,
+  #image2,
+  #image3 {
+    margin-top: 0;
+    box-shadow: 0 0 40px rgba(25, 70, 65, 1);
+  }
+
+  #tribute-info {
+    grid-area: one;
+  }
+
+  #tribute-info2 {
+    grid-area: two;
+  }
+  #tribute-info3 {
+    grid-area: three;
+  }
+
+  #tribute-info,
+  #tribute-info2,
+  #tribute-info3 {
+    position: relative;
+    margin: 30px auto 0 auto;
+    width: 90%;
+  }
+
+  #content-text-container {
+    grid-area: four;
+  }
+
+  #thirdbox {
+    grid-area: five;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #headerimg {
+    bottom: -55%;
+  }
+
+  #title {
+    padding-left: 40px;
+    font-size: 4em;
+    line-height: 1.6em;
+  }
+
+  #content-text-title {
+    font-size: 5em;
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+
+  #content-paragraphs {
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+      "left1 left2"
+      "right1 right2";
+  }
+
+  #content-text-container p {
+    font-size: 1em;
+    padding: 2% 7%;
+    line-height: 1.8em;
+    text-indent: 50px;
+  }
+
+  #content-text-p {
+    grid-area: left1;
+  }
+
+  #content-text-p2 {
+    grid-area: left2;
+  }
+
+  #content-text-p3 {
+    grid-area: right1;
+  }
+
+  #content-text-p4 {
+    grid-area: right2;
+  }
+
+  #tribute-info:hover,
+  #tribute-info2:hover,
+  #tribute-info3:hover {
+    cursor: pointer;
+    color: white;
+    background: rgba(2, 28, 34, 0.521);
+  }
+
+  #image2:hover + #hidden1 {
+    display: block;
+    cursor: pointer;
+  }
+
+  #image:hover + #hidden2 {
+    display: block;
+    cursor: pointer;
+  }
+
+  #image3:hover + #hidden3 {
+    display: block;
+    cursor: pointer;
+  }
+}
