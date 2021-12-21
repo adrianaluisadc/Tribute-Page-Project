@@ -1,190 +1,255 @@
-@media only screen and (min-width: 320px) {
-  main {
-    display: grid;
-    grid-template-areas:
-      "header"
-      "content"
-      "footer";
+main {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+}
+
+/*-------------header area-------------*/
+#header {
+  position: relative;
+  display: grid;
+  grid-area: "header";
+  width: 100%;
+  height: 32.5em;
+  overflow: hidden;
+}
+
+#top-bar {
+  position: absolute;
+  display: grid;
+  width: 100%;
+  height: 5%;
+  background-color: #194641;
+  z-index: 1;
+  opacity: 60%;
+}
+
+#topbarinfo {
+  font-size: 0.6em;
+  justify-self: center;
+  align-self: center;
+}
+
+#headerimg {
+  position: absolute;
+  width: 170%;
+  right: -10%;
+}
+
+#text-container {
+  position: absolute;
+  max-width: 100%;
+  justify-self: center;
+  align-self: center;
+  animation-name: title;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+#title {
+  font-size: 2em;
+  line-height: 1.6em;
+}
+
+/*-----------Contents------------  */
+
+#content {
+  max-width: 100%;
+  height: auto;
+  display: grid;
+  grid-area: "content";
+  overflow: hidden;
+}
+
+/* ----first box------- */
+
+#img-div {
+  display: grid;
+  width: 90%;
+  overflow: hidden;
+  margin: auto;
+  margin-bottom: 25%;
+  padding: auto;
+  position: relative;
+}
+
+#image,
+#image3 {
+  margin-top: 10px;
+}
+
+#image,
+#image2,
+#image3 {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+#img-caption {
+  padding: 5px;
+  margin: 5%;
+  justify-self: center;
+}
+
+#img-caption::before {
+  content: "";
+  position: absolute;
+  background: rgba(4, 35, 43, 0.2);
+  width: 100%;
+  height: 0.45vh;
+  left: 0;
+  top: 0.6%;
+}
+
+#tribute-info {
+  position: absolute;
+  margin-top: 90%;
+  right: 0;
+  width: 70%;
+}
+
+#tribute-info h2,
+#tribute-info2 h2,
+#tribute-info3 h2 {
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#tribute-info p,
+#tribute-info2 p,
+#tribute-info3 p {
+  font-size: 0.7em;
+  padding-top: 3px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#tribute-info2 {
+  position: absolute;
+  margin-top: 191%;
+  left: 0;
+  width: 70%;
+}
+
+#tribute-info3 {
+  position: absolute;
+  margin-top: 283%;
+  right: 0;
+  width: 70%;
+}
+
+/* -----second box------ */
+
+#content-text-container p {
+  font-size: 0.9em;
+}
+
+#content-text-title {
+  text-align: center;
+}
+#content-text-p {
+  padding: 5%;
+  text-align: justify;
+}
+
+#content-text-p2 {
+  padding: 5%;
+  text-align: justify;
+}
+#content-text-p3 {
+  padding: 5%;
+  text-align: justify;
+}
+
+#content-text-p4 {
+  padding: 5%;
+  text-align: justify;
+}
+
+/* ------------third box---------- */
+#extlinks {
+  padding: 5%;
+  text-align: justify;
+  font-size: 0.6em;
+}
+
+/* -----------footer--------- */
+
+footer {
+  background-color: #194641;
+}
+
+#footer-container {
+  width: 80%;
+  margin: auto;
+}
+
+#copyright {
+  font-size: 0.6em;
+  text-align: center;
+  padding: 0.4em;
+}
+
+.tr-con {
+  display: none;
+}
+
+#hidden1 {
+  position: absolute;
+  width: 390px;
+  padding: 0;
+  text-align: center;
+  font-size: 330px;
+  bottom: -4px;
+  left: -18px;
+  background-color: rgba(5, 40, 49, 0.8);
+  color: #fff9f7;
+  z-index: 1;
+  display: none;
+}
+
+#hidden2 {
+  position: absolute;
+  width: 390px;
+  padding: 0;
+  text-align: center;
+  font-size: 330px;
+  bottom: -4px;
+  left: 375px;
+  background-color: rgba(5, 40, 49, 0.8);
+  color: #f05050;
+  z-index: 1;
+  display: none;
+}
+
+#hidden3 {
+  position: absolute;
+  width: 390px;
+  padding: 0;
+  text-align: center;
+  font-size: 330px;
+  bottom: -4px;
+  left: 760px;
+  background-color: rgba(5, 40, 49, 0.8);
+  color: #ffffff;
+  z-index: 1;
+  display: none;
+}
+/*------------- Animations Setup------------- */
+
+@keyframes title {
+  0% {
+    opacity: 0%;
+    position: left;
+    padding-left: -10px;
   }
 
-  /*-------------header area-------------*/
-  #header {
-    position: relative;
-    display: grid;
-    grid-area: "header";
-    width: 100%;
-    height: 32.5em;
-    overflow: hidden;
-  }
-
-  #top-bar {
-    position: absolute;
-    display: grid;
-    width: 100%;
-    height: 5%;
-    background-color: #194641;
-    z-index: 1;
-    opacity: 60%;
-  }
-
-  #topbarinfo {
-    font-size: 0.6em;
-    justify-self: center;
-    align-self: center;
-  }
-
-  #headerimg {
-    position: absolute;
-    width: 170%;
-    right: -10%;
-  }
-
-  #text-container {
-    position: absolute;
-    max-width: 100%;
-    justify-self: center;
-    align-self: center;
-    animation-name: title;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-  }
-
-  #title {
-    font-size: 2em;
-    line-height: 1.6em;
-  }
-
-  /*-----------Contents------------  */
-
-  #content {
-    max-width: 100%;
-    height: auto;
-    display: grid;
-    grid-area: "content";
-    overflow: hidden;
-  }
-
-  /* ----first box------- */
-
-  #img-div {
-    display: grid;
-    width: 90%;
-    overflow: hidden;
-    margin: auto;
-    margin-bottom: 25%;
-    padding: auto;
-    position: relative;
-  }
-
-  #image,
-  #image3 {
-    margin-top: 10px;
-  }
-
-  #image,
-  #image2,
-  #image3 {
-    max-width: 100%;
-    margin-bottom: 10px;
-  }
-
-  #img-caption {
-    padding: 5px;
-    margin: 5%;
-    justify-self: center;
-  }
-
-  #img-caption::before {
-    content: "";
-    position: absolute;
-    background: rgba(4, 35, 43, 0.2);
-    width: 100%;
-    height: 0.45vh;
-    left: 0;
-    top: 0.6%;
-  }
-
-  #tribute-info {
-    position: absolute;
-    margin-top: 90%;
-    right: 0;
-    width: 70%;
-  }
-
-  #tribute-info h2,
-  #tribute-info2 h2,
-  #tribute-info3 h2 {
-    font-size: 100%;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  #tribute-info p,
-  #tribute-info2 p,
-  #tribute-info3 p {
-    font-size: 0.7em;
-    padding-top: 3px;
-    text-align: center;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-
-  #tribute-info2 {
-    position: absolute;
-    margin-top: 191%;
-    left: 0;
-    width: 70%;
-  }
-
-  #tribute-info3 {
-    position: absolute;
-    margin-top: 283%;
-    right: 0;
-    width: 70%;
-  }
-
-  /* -----second box------ */
-
-  #content-text-container {
-    margin-top: 5%;
-  }
-  #content-text-container p {
-    font-size: 0.9em;
-  }
-
-  #content-text-title {
-    text-align: center;
-  }
-  #content-text-p {
-    padding: 5%;
-    text-align: justify;
-  }
-
-  #content-text-p2 {
-    padding: 5%;
-    text-align: justify;
-  }
-
-  /* ------------third box---------- */
-  #extlinks {
-    padding: 5%;
-    text-align: justify;
-    font-size: 0.6em;
-    
-  }
-
-  /*------------- Animations Setup------------- */
-
-  @keyframes title {
-    0% {
-      opacity: 0%;
-      position: left;
-      padding-left: -10px;
-    }
-
-    100% {
-      padding-left: 1em;
-    }
+  100% {
+    padding-left: 1em;
   }
 }
